@@ -300,7 +300,7 @@
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
-                    <form action="EmployAdd" method="post">
+                    <form action="Add" method="post">
                                        <tbody class=" text-capitalize">              
                                             <tr>
 												<td>Employee's Code</td>

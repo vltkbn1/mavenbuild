@@ -306,7 +306,7 @@
 		int id = Integer.parseInt(request.getParameter("id"));
 	    EpModel employ = EpDAO.getEmployById(id);
 	%>
-	<form action="EmployEdit" method="post">
+	<form action="Edit" method="post">
 		
                                    
                                             <tr>

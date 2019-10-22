@@ -79,10 +79,10 @@ public static boolean editEmploys(EpModel employ) {
 		}
 		
 	}
-public static boolean deleteEmploys(EpModel employ) {
+public static boolean DeleteEmploys(EpModel employ) {
 	Connection conn = DBConnection.getConnect();
 	try {
-		String sql = "DELETE FROM `qlnv` WHERE `id`='"+employ.getId()+"' ";
+		String sql = "DELETE FROM `qlnv` WHERE id="+employ.getId();
 		
 		PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);
 		statement.executeUpdate();
@@ -92,7 +92,7 @@ public static boolean deleteEmploys(EpModel employ) {
 		return false;
 	}
 	
-	
+}
 	public static void main(String[] args) {
 		System.out.println("Size cua mang: "+getEmploys().size());
 		System.out.println();

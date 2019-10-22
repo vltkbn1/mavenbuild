@@ -31,12 +31,12 @@ public class Delete extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-int id = Integer.parseInt(request.getParameter("id"));
+		int id = Integer.parseInt(request.getParameter("id"));
 		
 		EpModel employ = new EpModel();
 		employ.setId(id);
 		
-		if(EpDAO.deleteEmploys(employ) ) {
+		if(EpDAO.DeleteEmploys(employ) ) {
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
 		}else {

@@ -44,12 +44,14 @@ public class Edit extends HttpServlet {
 		String tennv = request.getParameter("edit3");
 		String dc = request.getParameter("edit4");
 		int sdt = Integer.parseInt(request.getParameter("edit5"));
+		
 		EpModel employ = new EpModel();
 		employ.setId(id);
 		employ.setManv(manv);
 		employ.setTennv(tennv);
 		employ.setDc(dc);
 		employ.setSdt(sdt);
+		
 		if(EpDAO.editEmploys(employ) ) {
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);

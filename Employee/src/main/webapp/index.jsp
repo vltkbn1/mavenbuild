@@ -315,14 +315,14 @@
 								<td><%=item.getDc() %></td>
 								<td><%=item.getSdt() %></td>
 								<td style="text-align:center;">
-									<a href="edit.jsp?id=<%=item.getId() %>"><i class="fa fa-edit"></i></a>
+									<a href="edit.jsp?id=<%=item.getId() %>">EDIT</a>
 									
 								</td>
 								<td style="text-align:center;">
-								<a href="EmployDelete?id=<%=item.getId() %>"><i class="fa fa-trash"></i></a></td>
+								<a href="Delete?id=<%=item.getId() %>">DELETE</a></td>
 							</tr>
 								<% } %>
-                                        <a href="add.jsp"><i class="fa fa-plus"></i> ADD </a>
+                                        <a href="add.jsp"> ADD </a>
                                  
                   </tbody>
                 </table>

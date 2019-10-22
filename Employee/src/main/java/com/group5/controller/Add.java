@@ -41,15 +41,18 @@ public class Add extends HttpServlet {
 //		doGet(request, response);
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=ISO-8859-1");
+		
 		String manv = request.getParameter("add1");
 		String tennv = request.getParameter("add2");
 		String dc = request.getParameter("add3");
 		int sdt = Integer.parseInt(request.getParameter("add4"));
+		
 		EpModel employ = new EpModel();
 		employ.setManv(manv);
 		employ.setTennv(tennv);
 		employ.setDc(dc);
 		employ.setSdt(sdt);
+		
 		if(EpDAO.addEmploys(employ)) {
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 			rd.forward(request, response);
