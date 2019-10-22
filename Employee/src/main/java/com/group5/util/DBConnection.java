@@ -1,6 +1,5 @@
 package com.group5.util;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -26,4 +25,3 @@ public class DBConnection {
 		else System.out.println("Ket noi that bai!");
 	}
 }
-

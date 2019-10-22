@@ -307,7 +307,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <% for(EpModel item : EpDAO.getEmploys()) { %>
+                                        <% for(EpModel item:EpDAO.getEmploys()) { %>
 									<tr>
 								
 								<td><%=item.getManv() %></td>

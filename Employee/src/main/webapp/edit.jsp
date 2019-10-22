@@ -1,5 +1,6 @@
-<%@page import="com.ictu.dao.EmployDAO"%>
-<%@page import="com.ictu.model.EmployMODEL"%>
+
+<%@page import="com.group5.dao.EpDAO"%>
+<%@page import="com.group5.model.EpModel"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -303,7 +304,7 @@
                    
                                        <tbody class=" text-capitalize"><%
 		int id = Integer.parseInt(request.getParameter("id"));
-	    EmployMODEL employ = EmployDAO.getEmployById(id);
+	    EpModel employ = EpDAO.getEmployById(id);
 	%>
 	<form action="EmployEdit" method="post">
 		

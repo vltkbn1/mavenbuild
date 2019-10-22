@@ -79,6 +79,18 @@ public static boolean editEmploys(EpModel employ) {
 		}
 		
 	}
+public static boolean deleteEmploys(EpModel employ) {
+	Connection conn = DBConnection.getConnect();
+	try {
+		String sql = "DELETE FROM `qlnv` WHERE `id`='"+employ.getId()+"' ";
+		
+		PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);
+		statement.executeUpdate();
+		return true;
+	} catch (Exception e) {
+		e.printStackTrace();
+		return false;
+	}
 	
 	
 	public static void main(String[] args) {
