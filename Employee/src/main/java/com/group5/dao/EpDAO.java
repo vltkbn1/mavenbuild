@@ -3,13 +3,14 @@ package com.group5.dao;
 
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-
 import com.group5.model.EpModel;
 import com.group5.util.DBConnection;
-import com.mysql.jdbc.PreparedStatement;
+
+
 
 public class EpDAO {
 	public static ArrayList<EpModel> getEmploys(){
@@ -82,7 +83,7 @@ public static boolean editEmploys(EpModel employ) {
 public static boolean DeleteEmploys(EpModel employ) {
 	Connection conn = DBConnection.getConnect();
 	try {
-		String sql = "DELETE FROM `qlnv` WHERE id="+employ.getId();
+		String sql = "DELETE FROM `qlnv` WHERE id=";
 		
 		PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);
 		statement.executeUpdate();
