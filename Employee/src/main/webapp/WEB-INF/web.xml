@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>com.group5.controller.Add</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Edit</servlet-name>
+  	<display-name>Edit</display-name>
+  	<description></description>
+  	<servlet-class>com.group5.controller.Edit</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Add</servlet-name>
   	<url-pattern>/Add</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Edit</servlet-name>
+  	<url-pattern>/Edit</url-pattern>
   </servlet-mapping>
 </web-app>

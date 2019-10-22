@@ -45,7 +45,40 @@ public class EpDAO {
 		}
 		
 	}
-
+	public static EpModel getEmployById(int  id){
+		Connection conn = DBConnection.getConnect();
+		EpModel employ= new EpModel();
+		
+		try {
+			ResultSet rs = (ResultSet) conn.prepareStatement("SELECT * FROM `qlnv` WHERE id="+id).executeQuery();
+			while(rs.next()) {
+				
+				employ.setId(rs.getInt("id"));
+				employ.setManv(rs.getString("manv"));
+				employ.setTennv(rs.getString("tennv"));
+				employ.setDc(rs.getString("dc"));
+				employ.setSdt(rs.getInt("sdt"));
+			
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return employ;
+	}
+public static boolean editEmploys(EpModel employ) {
+		Connection conn = DBConnection.getConnect();
+		try {
+			String sql = "UPDATE `qlnv` SET `id`='"+employ.getId()+"',`manv`='"+employ.getManv()+"',`tennv`='"+employ.getTennv()+"',`dc`='"+employ.getDc()+"',`sdt`='"+employ.getSdt()+"' WHERE `id`='"+employ.getId()+"' ";
+			
+			PreparedStatement statement = (PreparedStatement) conn.prepareStatement(sql);
+			statement.executeUpdate();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
+	}
 	
 	
 	public static void main(String[] args) {
